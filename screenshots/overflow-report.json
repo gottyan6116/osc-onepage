@@ -1,0 +1,17 @@
+[
+  {
+    "view": "desktop-1440",
+    "docWidth": 1425,
+    "innerWidth": 1440
+  },
+  {
+    "view": "tablet-768",
+    "docWidth": 753,
+    "innerWidth": 768
+  },
+  {
+    "view": "mobile-390",
+    "docWidth": 390,
+    "innerWidth": 390
+  }
+]
