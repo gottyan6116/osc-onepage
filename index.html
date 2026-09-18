@@ -88,48 +88,62 @@
       <a class="scroll-cue" href="#issues" aria-label="課題セクションへ移動"><span></span></a>
     </section>
 
-    <!-- SECTION 03 | Issues -->
+    <!-- SECTION 03 | Issues (workflow navigation) -->
     <section class="section issues" id="issues" aria-labelledby="issues-title">
-      <div class="container">
+      <div class="container issues-inner">
+        <div class="reg-mark" aria-hidden="true"><span>CAD FOR<br>A BETTER<br>MANUFACTURING</span></div>
         <header class="section-head reveal">
-          <p class="sec-no">01 — Challenges</p>
-          <h2 id="issues-title">こんな課題を<wbr>お持ちでは<wbr>ありませんか？</h2>
-          <p class="sec-lead">課題を選ぶと、関係のある製品へ移動します。</p>
+          <p class="sec-no">01 — WORKFLOW CHECK</p>
+          <h2 id="issues-title">どの工程で、<wbr>仕事が<wbr>止まって<wbr>いますか？</h2>
+          <p class="sec-lead">設計から製造まで、<wbr>いま負担が<wbr>集中している<wbr>工程を<wbr>選んでください。</p>
         </header>
-        <ol class="issue-list">
-          <li class="reveal" style="--i:0">
-            <button class="issue" type="button" data-target="zwcad">
-              <span class="issue-no">01</span>
-              <span class="issue-title">CADの導入・維持コストを見直したい</span>
-              <span class="issue-hint">永久ライセンスの2D CAD <b>ZWCAD</b></span>
-              <svg class="i issue-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <ol class="issue-list" aria-label="工程別の課題">
+          <li class="flow-card reveal" style="--i:0">
+            <button class="issue" type="button" data-target="zwcad" aria-pressed="false">
+              <span class="issue-head"><span class="issue-no">01</span><span class="issue-stage">導入・運用</span></span>
+              <img class="issue-icon" src="assets/icons/icon-cad-operation.png" width="253" height="160" alt="" loading="lazy" decoding="async">
+              <span class="issue-title">CADの維持費が<wbr>予算を圧迫している</span>
+              <span class="issue-impact">利用環境を増やしにくい</span>
+              <span class="issue-product"><span class="issue-product-label">関連製品</span><span class="issue-product-name">ZWCAD<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+              <span class="issue-marker" aria-hidden="true"></span>
             </button>
           </li>
-          <li class="reveal" style="--i:1">
-            <button class="issue" type="button" data-target="zwcad">
-              <span class="issue-no">02</span>
-              <span class="issue-title">既存のDWG図面を活用したい</span>
-              <span class="issue-hint">DWGをネイティブに扱う <b>ZWCAD</b></span>
-              <svg class="i issue-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <li class="flow-card reveal" style="--i:1">
+            <button class="issue" type="button" data-target="zwcad" aria-pressed="true">
+              <span class="issue-head"><span class="issue-no">02</span><span class="issue-stage">2D図面</span></span>
+              <img class="issue-icon" src="assets/icons/icon-dwg-drawing.png" width="187" height="160" alt="" loading="lazy" decoding="async">
+              <span class="issue-title">過去のDWG図面を<wbr>活かしきれない</span>
+              <span class="issue-impact">変換・修正の確認に時間がかかる</span>
+              <span class="issue-product"><span class="issue-product-label">関連製品</span><span class="issue-product-name">ZWCAD<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+              <span class="issue-marker" aria-hidden="true"></span>
             </button>
           </li>
-          <li class="reveal" style="--i:2">
-            <button class="issue" type="button" data-target="zwcad-mfg">
-              <span class="issue-no">03</span>
-              <span class="issue-title">機械設計の作図業務を効率化したい</span>
-              <span class="issue-hint">部品ライブラリとBOM機能の <b>ZWCAD MFG</b></span>
-              <svg class="i issue-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <li class="flow-card reveal" style="--i:2">
+            <button class="issue" type="button" data-target="zwcad-mfg" aria-pressed="false">
+              <span class="issue-head"><span class="issue-no">03</span><span class="issue-stage">機械設計</span></span>
+              <img class="issue-icon" src="assets/icons/icon-mechanical-bom.png" width="270" height="160" alt="" loading="lazy" decoding="async">
+              <span class="issue-title">標準部品と部品表を<wbr>毎回つくっている</span>
+              <span class="issue-impact">繰り返し作業で作図時間が増える</span>
+              <span class="issue-product"><span class="issue-product-label">関連製品</span><span class="issue-product-name">ZWCAD MFG<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+              <span class="issue-marker" aria-hidden="true"></span>
             </button>
           </li>
-          <li class="reveal" style="--i:3">
-            <button class="issue" type="button" data-target="zw3d">
-              <span class="issue-no">04</span>
-              <span class="issue-title">3D設計から製造まで対応したい</span>
-              <span class="issue-hint">3D CAD/CAM一体型の <b>ZW3D</b></span>
-              <svg class="i issue-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <li class="flow-card reveal" style="--i:3">
+            <button class="issue" type="button" data-target="zw3d" aria-pressed="false">
+              <span class="issue-head"><span class="issue-no">04</span><span class="issue-stage">3D・製造</span></span>
+              <img class="issue-icon" src="assets/icons/icon-3d-manufacturing.png" width="140" height="160" alt="" loading="lazy" decoding="async">
+              <span class="issue-title">設計と加工のデータが<wbr>つながらない</span>
+              <span class="issue-impact">変更反映と受け渡しに手間がかかる</span>
+              <span class="issue-product"><span class="issue-product-label">関連製品</span><span class="issue-product-name">ZW3D<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+              <span class="issue-marker" aria-hidden="true"></span>
             </button>
           </li>
         </ol>
+        <p class="issue-guide reveal">
+          <span class="issue-guide-text">課題を選ぶと、<wbr>最適な製品と<wbr>解決方法を<wbr>ご案内します。</span>
+          <span class="issue-guide-line" aria-hidden="true"></span>
+          <span class="issue-guide-tag" aria-hidden="true">FROM DESIGN<br>TO MANUFACTURING</span>
+        </p>
       </div>
     </section>
 

@@ -219,8 +219,10 @@
   });
 
   /* ---------------- issues -> product card ---------------- */
-  $$(".issue").forEach((btn) =>
+  const issueBtns = $$(".issue");
+  issueBtns.forEach((btn) =>
     btn.addEventListener("click", () => {
+      issueBtns.forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
       const card = document.getElementById("card-" + btn.dataset.target);
       card.scrollIntoView({ behavior: reduced() ? "auto" : "smooth", block: "center" });
       card.classList.add("is-in");
