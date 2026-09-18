@@ -69,10 +69,10 @@ for (const [w, h, label] of [[1440, 900, "desktop"], [768, 1024, "tablet"], [390
   await snap(`${pfx}-01-firstview`);
   report.push({ view: pfx, docWidth: await evaluate("document.documentElement.scrollWidth"), innerWidth: w });
 
-  // scroll-triggered hero explode
+  // hero after scrolling (parallax)
   await evaluate("window.scrollTo(0, innerHeight*0.45)");
   await sleep(700);
-  await snap(`${pfx}-02-hero-exploded`);
+  await snap(`${pfx}-02-hero-scrolled`);
 
   await go(BASE + "?static", 1500);
   await evaluate("document.getElementById('products').scrollIntoView()");

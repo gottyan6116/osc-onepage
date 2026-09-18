@@ -117,9 +117,6 @@
   );
 
   /* ---------------- hero + misc visuals ---------------- */
-  const heroCanvas = $('[data-visual="hero"]');
-  const heroSvg = visuals.hero();
-  heroCanvas.appendChild(heroSvg);
   const ctaBg = $('[data-visual="cta-bg"]');
   ctaBg.appendChild(visuals.ctaBg());
   $$(".service-fig").forEach((el) => el.appendChild(visuals.service(el.dataset.visual)));
@@ -154,7 +151,7 @@
   const header = $(".site-header");
   const progress = $(".scroll-progress");
   const hero = $(".hero");
-  const readout = $("[data-explode-readout]");
+  const heroFrame = $("[data-hero-parallax]");
   const flow = $("[data-flow]");
   const flowFill = $("[data-flow-fill]");
   const flowSteps = $$(".flow-steps li");
@@ -167,16 +164,11 @@
     header.classList.toggle("is-scrolled", y > 8);
     progress.style.setProperty("--sp", max > 0 ? (y / max).toFixed(4) : 0);
 
-    // Hero: exploded view driven by scroll
+    // Hero: subtle parallax on the key visual (desktop only)
     const hr = hero.getBoundingClientRect();
-    if (hr.bottom > 0) {
-      const mobile = innerWidth <= 960;
-      const base = mobile ? $(".hero-visual").getBoundingClientRect() : hr;
-      const p = mobile
-        ? clamp((innerHeight * 0.9 - base.top) / (base.height * 1.1), 0, 1)
-        : clamp(-hr.top / (hr.height * 0.5), 0, 1);
-      heroSvg.style.setProperty("--explode", (0.4 + p * 0.6).toFixed(3));
-      readout.textContent = `EXPLODE ${Math.round(p * 100)}%`;
+    if (hr.bottom > 0 && heroFrame) {
+      const shift = !reduced() && innerWidth > 960 ? clamp(-hr.top, 0, hr.height) * 0.07 : 0;
+      heroFrame.style.setProperty("--hero-py", shift.toFixed(1) + "px");
     }
 
     // Support flow line

@@ -51,41 +51,68 @@
   <main id="main">
     <!-- SECTION 02 | Hero -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-grid">
+      <div class="hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow load-in" style="--d:0"><span class="eyebrow-line"></span>ZWSOFT 製品 ｜ 2D CAD・3D CAD/CAM</p>
+          <p class="hero-eyebrow load-in" style="--d:0"><span class="hero-eyebrow-line" aria-hidden="true"></span>ZWSOFT 製品<span class="hero-eyebrow-sep" aria-hidden="true">|</span>2D CAD・3D CAD/CAM</p>
           <h1 id="hero-title" class="hero-title">
-            <span class="line"><span class="load-in" style="--d:1">設計の可能性を、</span></span>
-            <span class="line"><span class="load-in" style="--d:2">もっと自由に。</span></span>
+            <span class="hero-title-line"><span class="load-in" style="--d:1">設計の可能性を、</span></span>
+            <span class="hero-title-line is-accent"><span class="load-in" style="--d:2">もっと自由に。</span></span>
           </h1>
-          <p class="hero-lead load-in" style="--d:3">2D CADから3D CAD/CAMまで。<wbr>用途に合わせて選べる<wbr>ZWSOFT製品をご紹介します。</p>
+          <p class="hero-lead load-in" style="--d:3">2D CADから3D CAD/CAMまで。<wbr>用途に合わせて選べる<wbr>ZWSOFT製品を<wbr>ご紹介します。</p>
           <div class="hero-actions load-in" style="--d:4">
-            <a class="btn btn-primary" href="#compare">製品を比較する<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
-            <a class="btn btn-ghost" href="https://www.osc-inc.co.jp/お問合せ/" target="_blank" rel="noopener">導入について相談する<span class="ext" aria-hidden="true"></span><span class="sr-only">（公式サイト・別タブ）</span></a>
+            <a class="hero-btn hero-btn--primary" href="#compare">
+              <span>製品を比較する</span>
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="hero-btn hero-btn--secondary" href="https://www.osc-inc.co.jp/お問合せ/" target="_blank" rel="noopener">
+              <span>導入について相談する</span>
+              <span class="ext" aria-hidden="true"></span><span class="sr-only">（公式サイト・別タブ）</span>
+            </a>
           </div>
-          <dl class="hero-index load-in" style="--d:5">
-            <div><dt>ZW3D</dt><dd>3D CAD/CAM</dd></div>
-            <div><dt>ZWCAD</dt><dd>2D 汎用CAD</dd></div>
-            <div><dt>ZWCAD MFG</dt><dd>2D 機械設計CAD</dd></div>
-          </dl>
+          <span class="hero-rule load-in" style="--d:5" aria-hidden="true"></span>
+          <nav class="hero-products load-in" style="--d:5" aria-label="製品へのショートカット">
+            <ul>
+              <li>
+                <a class="hero-product" href="#card-zw3d">
+                  <img class="hero-product-icon" src="assets/icons/icon-3d-manufacturing.png" width="140" height="160" alt="">
+                  <span class="hero-product-text"><span class="hero-product-name">ZW3D</span><span class="hero-product-cat">3D CAD/CAM</span></span>
+                </a>
+              </li>
+              <li>
+                <a class="hero-product" href="#card-zwcad">
+                  <img class="hero-product-icon" src="assets/icons/icon-dwg-drawing.png" width="187" height="160" alt="">
+                  <span class="hero-product-text"><span class="hero-product-name">ZWCAD</span><span class="hero-product-cat">2D 汎用CAD</span></span>
+                </a>
+              </li>
+              <li>
+                <a class="hero-product" href="#card-zwcad-mfg">
+                  <img class="hero-product-icon" src="assets/icons/icon-mechanical-bom.png" width="270" height="160" alt="">
+                  <span class="hero-product-text"><span class="hero-product-name">ZWCAD MFG</span><span class="hero-product-cat">2D 機械設計CAD</span></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-
-        <figure class="hero-visual" aria-labelledby="hero-visual-cap">
-          <div class="viewport" data-hero-viewport>
-            <div class="vp-bar" aria-hidden="true">
-              <span>ASSY-001 ／ ISO VIEW</span>
-              <span class="vp-dots"><i></i><i></i><i></i></span>
-            </div>
-            <div class="vp-canvas" data-visual="hero" role="img" aria-label="機械部品（フランジ・ベアリングハウジング・ギヤ・カラー・段付きシャフト）を軸方向に分解したアイソメトリック図。スクロールに合わせて部品が分解される。"></div>
-            <div class="vp-foot" aria-hidden="true">
-              <span>SCALE 1:2</span>
-              <span data-explode-readout>EXPLODE 0%</span>
-            </div>
-          </div>
-          <figcaption id="hero-visual-cap" class="fig-note">※ 本モック用に自作した技術イラストです。ZWSOFT製品の実際の画面ではありません。</figcaption>
-        </figure>
       </div>
-      <a class="scroll-cue" href="#issues" aria-label="課題セクションへ移動"><span></span></a>
+
+      <figure class="hero-visual">
+        <div class="hero-visual-frame" data-hero-parallax>
+          <picture>
+            <source type="image/webp"
+              srcset="assets/hero/hero-city-cad-640.webp 640w, assets/hero/hero-city-cad-1000.webp 1000w, assets/hero/hero-city-cad-1400.webp 1400w"
+              sizes="(max-width: 960px) 100vw, 58vw">
+            <img class="hero-visual-img" src="assets/hero/hero-city-cad-1000.jpg" width="1000" height="666"
+              alt="左半分は緑に囲まれた実際の街並みの空撮、右半分は同じ街を青いワイヤーフレームで描いたCADデータ風の表現。現実の建物が設計データへ置き換わっていく様子を示すイメージ。"
+              fetchpriority="high" decoding="async">
+          </picture>
+        </div>
+        <figcaption class="hero-visual-tags" aria-hidden="true">
+          <span class="hero-tag hero-tag--real">REALITY</span>
+          <span class="hero-tag hero-tag--data">DESIGN DATA</span>
+        </figcaption>
+      </figure>
+
+      <p class="hero-foot" aria-hidden="true"><span></span>DESIGN SOFTWARE FOR MANUFACTURING</p>
     </section>
 
     <!-- SECTION 03 | Issues (workflow navigation) -->
