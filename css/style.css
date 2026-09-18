@@ -18,7 +18,7 @@
   --night-2: #17212c;
   --osc-blue: #0474ba; /* sampled from osc-inc.co.jp */
 
-  --font: "IBM Plex Sans JP", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+  --font: "Meiryo UI", "メイリオ", Meiryo, "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
 
   --radius: 14px;
