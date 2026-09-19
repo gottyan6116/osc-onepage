@@ -369,20 +369,6 @@
     );
   }
 
-  /* ---------- small service figures ---------- */
-  const svc = {
-    "svc-tech": `<circle cx="32" cy="32" r="13"/><circle cx="32" cy="32" r="5"/><path d="M32 12v6M32 46v6M12 32h6M46 32h6M18 18l4 4M42 42l4 4M46 18l-4 4M18 46l4-4"/>`,
-    "svc-contract": `<rect x="12" y="10" width="40" height="44" rx="2"/><path d="M12 44h40M36 44v10M20 20h24M20 28h16"/>`,
-    "svc-staff": `<circle cx="26" cy="22" r="8"/><path d="M12 50c2-9 8-14 14-14s12 5 14 14"/><path d="M42 26h12M42 33h12M42 40h8"/>`,
-    "svc-edu": `<rect x="10" y="14" width="44" height="28" rx="2"/><path d="M24 50h16M32 42v8M18 24l8 6-8 6M30 36h12"/>`
-  };
-  function service(key) {
-    return el(
-      `<svg xmlns="${NS}" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${svc[key]}</svg>`,
-      "svc-svg"
-    );
-  }
-
   /* ---------- final CTA background drawing ---------- */
   function ctaBg() {
     const L = (d, extra) => `<path d="${d}" pathLength="1" ${extra || ""}/>`;
@@ -411,7 +397,6 @@
     zwcad,
     "zwcad-mfg": mfg,
     ctaBg,
-    service,
     rotateBracket
   };
 })();

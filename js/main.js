@@ -119,7 +119,6 @@
   /* ---------------- hero + misc visuals ---------------- */
   const ctaBg = $('[data-visual="cta-bg"]');
   ctaBg.appendChild(visuals.ctaBg());
-  $$(".service-fig").forEach((el) => el.appendChild(visuals.service(el.dataset.visual)));
 
   /* ---------------- scroll reveal ---------------- */
   const revealIO = new IntersectionObserver(
@@ -152,9 +151,6 @@
   const progress = $(".scroll-progress");
   const hero = $(".hero");
   const heroFrame = $("[data-hero-parallax]");
-  const flow = $("[data-flow]");
-  const flowFill = $("[data-flow-fill]");
-  const flowSteps = $$(".flow-steps li");
   let ticking = false;
 
   function onScroll() {
@@ -170,12 +166,6 @@
       const shift = !reduced() && innerWidth > 960 ? clamp(-hr.top, 0, hr.height) * 0.07 : 0;
       heroFrame.style.setProperty("--hero-py", shift.toFixed(1) + "px");
     }
-
-    // Support flow line
-    const fr = flow.getBoundingClientRect();
-    const fp = clamp((innerHeight * 0.85 - fr.top) / (fr.height + innerHeight * 0.25), 0, 1);
-    flow.style.setProperty("--flow", fp.toFixed(3));
-    flowSteps.forEach((li, i) => li.classList.toggle("is-on", fp >= (i / flowSteps.length) * 0.9 + 0.02));
   }
   const requestScroll = () => {
     if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
